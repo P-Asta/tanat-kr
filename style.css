@@ -1,0 +1,66 @@
+header{
+    --mg: 311px;
+    position: fixed;
+    width: 100%;
+    display: block;
+    height: 79px;
+    /* padding: 0 311px; */
+    /* background-color: red; */
+    background-color: #ffffff72;
+    backdrop-filter: blur(10px);
+    z-index: 100;
+}
+header > img{
+    width: 79px;
+    margin-top: 8px;
+    margin-left: var(--mg);
+    float: left;
+}
+header > nav{
+    display: flex;
+    gap: 80px;
+    margin-right: var(--mg);
+    margin-top: 29px;
+    float: right;
+}
+
+header > nav > a{
+    color: #0F1F6C;
+    text-decoration: none;
+}
+.wave{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+}
+
+
+.vector{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+
+.peaple{
+    position: absolute;
+    width: 450px;
+    right: 500px;
+    bottom: 80px;
+}
+#home{
+    display: flex;
+    align-items: center;
+}
+h1{
+    padding-right: 500px;
+    font-size: 88px;
+    color: #0F1F6C;
+}
+
+.fp-tooltip > ul{
+    /* right: 0; */
+    /* left: 17px;  */
+    background-color: red;
+}
