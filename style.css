@@ -129,6 +129,7 @@ h1{
 }
 
 .work{
+    transition: all .5s;
     display: flex;
     /* margin-left: 28%; */
     flex-direction: column;
@@ -154,7 +155,7 @@ h1{
 #works-ul{
     position: relative;
     display: flex;
-    gap: 12vw;
+    gap: 48px;
     overflow: hidden;
     padding: 0;
 }
