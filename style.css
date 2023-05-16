@@ -1,11 +1,16 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css");
+*{
+    font-family: "pretendard";
+    scroll-behavior: smooth;
+}
+
 header{
-    --mg: 311px;
+    /* --mg: 311px; */
+    --mg: 10%;
     position: fixed;
     width: 100%;
     display: block;
     height: 79px;
-    /* padding: 0 311px; */
-    /* background-color: red; */
     background-color: #ffffff72;
     backdrop-filter: blur(10px);
     z-index: 100;
@@ -19,6 +24,7 @@ header > img{
 header > nav{
     display: flex;
     gap: 80px;
+    /* gap: 20%; */
     margin-right: var(--mg);
     margin-top: 29px;
     float: right;
@@ -42,25 +48,82 @@ header > nav > a{
     left: 0;
     top: 0;
 }
-
-.peaple{
+.vector2{
     position: absolute;
-    width: 450px;
-    right: 500px;
-    bottom: 80px;
+    height: 100%;
+    right: 0;
+    top: 0;
 }
+.char{
+    position: absolute;
+}
+
+.char.one{
+    width: 20%;
+    right: 30%;
+    bottom: 8%;
+}
+
+
+.char.two{
+    z-index: 1;
+    width: 20%;
+    bottom: 10%;
+    left: 30%;
+}
+
 #home{
     display: flex;
     align-items: center;
 }
+
 h1{
-    padding-right: 500px;
-    font-size: 88px;
     color: #0F1F6C;
+    font-size: 3.5em;
+}
+
+#home h1{
+    position: absolute;
+    right: 53%;
+    top: 35%;
+    text-align: left;
 }
 
 .fp-tooltip > ul{
     /* right: 0; */
     /* left: 17px;  */
     background-color: red;
+}
+#info h1{
+    margin: 0;
+}
+
+#info{
+    display: flex;
+    gap: 12px;
+    flex-direction: column;
+    position: absolute;
+    text-align: left;
+    top: 32%;
+    right: 20%;
+}
+
+#info section{
+    color: #7982AD;
+}
+
+#skills{
+    display: flex;
+    gap: -20%;
+}
+
+.skill{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: #7982AD;
+}
+
+.skill > img{
+    width: 60%;
 }
