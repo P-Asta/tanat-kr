@@ -52,7 +52,6 @@ header > nav > a{
     height: 100%;
     right: 0;
     top: 0;
-    z-index: 1;
 }
 .char{
     position: absolute;
@@ -129,7 +128,8 @@ h1{
 }
 
 .work{
-    transition: all .5s;
+    background-color: #FAFBFD;
+    transition: transform .5s;
     display: flex;
     /* margin-left: 28%; */
     flex-direction: column;
@@ -143,7 +143,7 @@ h1{
 }
 
 .work.active{
-    border: solid #3D74E0 3px;
+    border: solid #3D74E0 5px;
 }
 
 
@@ -155,7 +155,7 @@ h1{
 #works-ul{
     position: relative;
     display: flex;
-    gap: 48px;
+    gap: 248px;
     overflow: hidden;
     padding: 0;
 }
@@ -169,4 +169,58 @@ h1{
 
 #works section{
     margin-left: 30%;
+}
+
+#items{
+    display: flex;
+    gap: 5%;
+    align-items: center;
+}
+
+.item{
+    font-size: 20px;
+    color: #7982AD;
+    font-weight: 200;
+}
+
+.item.active{
+    content: '';
+    text-decoration: underline #3D74E0 3px;
+    color: #3D74E0;
+    font-weight: 900;
+}
+
+#arrows::before{
+    content: '';
+    position: absolute;
+    text-align: right;
+    background: #FAFBFD;
+    /* background: red; */
+    right: 80%;
+
+    filter: blur(6px);
+    width: 40px;
+    height: 57px;
+
+}
+
+#arrows{
+    background-color: #FAFBFD;
+    position: absolute;
+    right: 40%;
+    top: 34.5%;
+}
+
+#contact p{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    margin: 0;
+}
+
+.vector3{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
 }

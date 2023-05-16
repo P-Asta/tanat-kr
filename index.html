@@ -93,11 +93,18 @@
             <img src="img/vector/5.svg" class="vector2">
             <img src="img/vector/6.svg" class="vector2">
             <img src="img/vector/7.svg" class="vector2">
-            <img src="img/vector/8.svg" class="vector2">
+            <img src="img/vector/8.svg" class="vector2" style="z-index: 1;">
             <section>
                 <h1>Works</h1>
-                a s d f
-                <b id="before"><</b><b id="after">></b>
+                <div id="items">
+                    <div class="item active">KORCEN</div>
+                    <div class="item">TNS</div>
+                    <div class="item">Disot</div>
+                </div>
+                <div id="arrows">
+                    <img src="img/arrow.svg" id="before" style="transform: rotate(180deg);">
+                    <img src="img/arrow.svg" id="after">
+                </div>
                 <ul id="works-ul">
                     <li class="work active">
                         <img src="img/work/1.png">
@@ -113,6 +120,19 @@
                 </ul>
             </section>
         </div>
+
+        <div id="contact" class="section">
+            
+            <img src="img/vector/9.svg" class="vector3">
+            <img src="img/line/6.svg" class="vector3" style="margin-bottom: 3.3%;">
+            <img src="img/vector/10.svg" class="vector3">
+            <img src="img/line/7.svg" class="vector3" style="margin-bottom: 1.9%;">
+            <img src="img/vector/11.svg" class="vector3">
+
+            <p>Copyright © 2022 Tanat. All rights reserved.</p>
+        
+        </div>
+
     </div>
 
     <ul id="#menu"></ul>
@@ -127,7 +147,7 @@
             sectionsColor: ["#FAFBFD", "#F6F9FC", "#FAFBFD"],
             loopHorizontal: true,
             menu: "#menu",
-            navigationTooltips:["home", "proflie", "works"],
+            navigationTooltips:["HOME", "PROFILE", "WORKS", "CONTACT"],
             showActiveTooltip: true,
             autoScrolling: true,
             navigation: true,
