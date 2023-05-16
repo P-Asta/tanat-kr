@@ -118,6 +118,8 @@
                         <img src="img/work/1.png">
                     </li>
                 </ul>
+                <!-- script.js에서 설정 가능 -->
+                <p id="des"></p>
             </section>
         </div>
 
@@ -128,6 +130,15 @@
             <img src="img/vector/10.svg" class="vector3">
             <img src="img/line/7.svg" class="vector3" style="margin-bottom: 1.9%;">
             <img src="img/vector/11.svg" class="vector3">
+
+            <article>
+                <a href="https://github.com/Tanat05">github</a>
+                <a href="">discord</a>
+                <a href="">team</a>
+            </article>
+            <h1>Contact</h1>
+            <div id="line"></div>
+            <h2>tanat@tanat.kr</h2>
 
             <p>Copyright © 2022 Tanat. All rights reserved.</p>
         
@@ -140,6 +151,12 @@
 
 
     <script>
+        i = 2
+        document.querySelectorAll(".wave").forEach(e => {
+            setTimeout(() => {
+                e.style.opacity = "1"
+            }, 500*i++)
+        })
         new fullpage("#fullpage", {
             autoScrolling: true,
             scrollHorizontally: true,

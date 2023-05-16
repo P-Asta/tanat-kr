@@ -34,6 +34,8 @@ header > nav > a{
     text-decoration: none;
 }
 .wave{
+    opacity: 0;
+    transition: all .5s;
     position: absolute;
     width: 100%;
     left: 0;
@@ -208,7 +210,8 @@ h1{
     background-color: #FAFBFD;
     position: absolute;
     right: 40%;
-    top: 34.5%;
+    bottom: 66%;
+    cursor: pointer;
 }
 
 #contact p{
@@ -223,4 +226,69 @@ h1{
     width: 100%;
     left: 0;
     bottom: 0;
+}
+
+#des{
+    color: #7982AD
+}
+#contact{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#contact article{
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    background: #F6F9FC;
+    border-radius: 8px;
+    padding: 100px;
+}
+
+#contact article>a {
+    background-color: #B4C9F3;
+    color: #7982AD;
+    padding: 16px 48px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+#contact article:hover>a{
+
+}
+
+
+
+#contact{
+    --right: 10%;
+    --left: 30%
+}
+
+#contact h1{
+    position: absolute;
+    right: var(--right);
+    bottom: 50%;
+    margin-bottom: 50px;
+}
+
+#contact #line{
+    
+    position: absolute;
+    right: var(--right);
+    bottom: 50%;
+    background: linear-gradient(270deg, #7982AD 0%, #B4C9F3 100%);
+    padding-left: var(--left);
+    margin-bottom: 50px;
+    height: 5px;
+    border-radius: 10px;
+
+}
+
+#contact h2{
+    position: absolute;
+    color: #0F1F6C;
+    font-weight: 200;
+    right: var(--right);
+    bottom: 50%;
 }
