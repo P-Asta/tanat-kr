@@ -5,7 +5,6 @@
 }
 
 header{
-    /* --mg: 311px; */
     --mg: 10%;
     position: fixed;
     width: 100%;
@@ -131,7 +130,7 @@ h1{
 
 .work{
     display: flex;
-    margin-left: 28%;
+    /* margin-left: 28%; */
     flex-direction: column;
     border: solid #7982AD4D 1px;
     width: 620px;
@@ -157,4 +156,16 @@ h1{
     display: flex;
     gap: 12vw;
     overflow: hidden;
+    padding: 0;
+}
+
+#works{
+    display: flex;
+    justify-content: center;
+    align-items: right;
+    text-align: left;
+}
+
+#works section{
+    margin-left: 30%;
 }
