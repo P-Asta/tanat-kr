@@ -261,24 +261,31 @@
                     e.style.transform = "translateY(500px)"
                     e.style.opacity = "0"
                 })
+
+                document.querySelectorAll("#contact h1")[0].style.transform = "translateX(-20px)"
+                document.querySelectorAll("#contact h1")[0].style.opacity = "0"
+                document.querySelectorAll("#line")[0].style.paddingLeft = "0"            
+                document.querySelectorAll("#contact h2")[0].style.transform = "translateX(20px)"
+                document.querySelectorAll("#contact h2")[0].style.opacity = "0"
+
                 if (after.index == 0){
                     i = 10
                     document.querySelectorAll(".wave").forEach(e => {
                         setTimeout(() => {
                             e.style.transform = "translateY(0)"
-                        }, 70*i++)
+                        }, 50*i++)
                     })
 
                     setTimeout(() =>{
                         document.querySelectorAll(".char")[0].style.opacity = "1"
                         document.querySelectorAll(".char")[0].style.transform = "translateX(0)"
-                    }, 70*i)
+                    }, 50*i)
 
                     
                     setTimeout(() =>{
                         document.querySelectorAll("#home h1")[0].style.opacity = "1"
                         document.querySelectorAll("#home h1")[0].style.transform = "translateY(0)"
-                    }, 120*i)
+                    }, 70*i)
                 }
                 if (after.index == 1) {
                     i = 10
@@ -315,16 +322,24 @@
                 }           
                 if (after.index == 2) {
                     i = 10
+                    setTimeout(() => {
+                        document.querySelectorAll("#works h1")[0].style.opacity = "1"
+                        document.querySelectorAll("#works h1")[0].style.transform = "translateX(0)"
+                    }, 50*i++)
                     document.querySelectorAll(".vector2").forEach(e => {
                         setTimeout(() => {
                             e.style.transform = "translateY(0)"
                             e.style.opacity = "1"
-                        }, 80*i++)
+                        }, 50*i++)
                     })
-                    setTimeout(() => {
-                        document.querySelectorAll("#works h1")[0].style.opacity = "1"
-                        document.querySelectorAll("#works h1")[0].style.transform = "translateX(0)"
-                    }, 1000)
+
+
+                    document.querySelectorAll(".item").forEach(e => {
+                        setTimeout(() => {
+                            e.style.opacity = "1"
+                            e.style.transform = "translateX(0)"
+                        }, 50*i++)
+                    })
 
                     document.querySelectorAll("#arrows > img").forEach(e => {
                         setTimeout(() => {
@@ -334,22 +349,15 @@
                                 e.style.transform = "translateX(0)"
                             }
                             e.style.opacity = "1"
-                        }, 80*i++)
+                        }, 60*i++)
                     })
                     
                     
-                    document.querySelectorAll(".item").forEach(e => {
-                        setTimeout(() => {
-                            e.style.opacity = "1"
-                            e.style.transform = "translateX(0)"
-                        }, 110*i++)
-                    })
-                    i = 20
-
+                    
                     document.querySelectorAll(".work").forEach(e => {
                         setTimeout(() => {
                             e.style.transform = "translateY(0)"
-                        }, 100*i++)
+                        }, 50*i++)
                     })
 
                     
@@ -365,21 +373,21 @@
                         setTimeout(() => {
                             e.style.transform = "translateY(0)"
                             e.style.opacity = "1"
-                        }, 80*i++)
+                        }, 50*i++)
                     })
                     setTimeout(() => {
                         document.querySelectorAll("#contact h1")[0].style.transform = "translateX(0)"
                         document.querySelectorAll("#contact h1")[0].style.opacity = "1"
-                    }, 70*i++)
+                    }, 50*i++)
 
                     setTimeout(() => {
                         document.querySelectorAll("#line")[0].style.paddingLeft = "20%"
-                    }, 80*i++)
+                    }, 60*i++)
                 
                     setTimeout(() => {
                         document.querySelectorAll("#contact h2")[0].style.transform = "translateX(0)"
                         document.querySelectorAll("#contact h2")[0].style.opacity = "1"
-                    }, 80*i++)
+                    }, 60*i++)
                 }
             }
         });
