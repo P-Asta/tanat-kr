@@ -35,6 +35,7 @@ header > nav > a{
 }
 .wave{
     transform: translateY(400px);
+    /* transition-timing-function: cubic-bezier(0, 0.61, 0.21, 5); */
     transition: all .5s;
     position: absolute;
     width: 100%;
@@ -106,8 +107,13 @@ h1{
     /* left: 17px;  */
     background-color: red;
 }
-#info h1{
+#info > h1{
     margin: 0;
+
+    
+    transition: all .5s;
+    opacity: 0;
+    transform: translateX(20px);
 }
 
 #info{
@@ -158,7 +164,6 @@ h1{
     border-radius: 15px;
 
     transform: translateY(-400px);
-    opacity: 0;
     z-index: 0;
 }
 
@@ -226,9 +231,6 @@ h1{
 
 #arrows{
     background-color: #FAFBFD;
-    position: absolute;
-    right: 40%;
-    bottom: 66%;
     cursor: pointer;
 }
 
@@ -262,12 +264,12 @@ h1{
     background: #F6F9FC;
     border-radius: 8px;
     padding: 100px;
+    border: 1px #ddd solid;
 }
 
 #contact article>a {
     background-color: #B4C9F3;
     color: #7982AD;
-    border: #F6F9FC 1px solid;
     padding: 16px 48px;
     border-radius: 5px;
     text-decoration: none;
