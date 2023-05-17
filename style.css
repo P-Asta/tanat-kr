@@ -34,7 +34,7 @@ header > nav > a{
     text-decoration: none;
 }
 .wave{
-    opacity: 0;
+    transform: translateY(400px);
     transition: all .5s;
     position: absolute;
     width: 100%;
@@ -48,15 +48,23 @@ header > nav > a{
     width: 100%;
     left: 0;
     top: 0;
+    transition: all .5s;
+    opacity: 0;
+    transform: translateY(-400px);
 }
 .vector2{
     position: absolute;
     height: 100%;
     right: 0;
     top: 0;
+    transform: translateX(400px);
+    transition: all .5s;
 }
 .char{
     position: absolute;
+    transition: all .5s;
+    opacity: 0;
+    transform: translateX(20px);
 }
 
 .char.one{
@@ -88,6 +96,9 @@ h1{
     right: 53%;
     top: 35%;
     text-align: left;
+    opacity: 0;
+    transition: all .5s;
+    transform: translateY(-20px);
 }
 
 .fp-tooltip > ul{
@@ -109,8 +120,11 @@ h1{
     right: 20%;
 }
 
-#info section{
+#info > section{
     color: #7982AD;
+    transition: all .5s;
+    opacity: 0;
+    transform: translateX(20px);
 }
 
 #skills{
@@ -123,6 +137,10 @@ h1{
     align-items: center;
     flex-direction: column;
     color: #7982AD;
+    opacity: 0;
+    transition: all .5s;
+    transform: translateY(-20px);
+
 }
 
 .skill > img{
@@ -131,16 +149,16 @@ h1{
 
 .work{
     background-color: #FAFBFD;
-    transition: transform .5s;
+    transition: transform .7s;
     display: flex;
-    /* margin-left: 28%; */
     flex-direction: column;
     border: solid #7982AD4D 1px;
     width: 620px;
     height: 380px;
     border-radius: 15px;
 
-    /* transform: translateX(-100vw); */
+    transform: translateY(-400px);
+    opacity: 0;
     z-index: 0;
 }
 
@@ -249,6 +267,7 @@ h1{
 #contact article>a {
     background-color: #B4C9F3;
     color: #7982AD;
+    border: #F6F9FC 1px solid;
     padding: 16px 48px;
     border-radius: 5px;
     text-decoration: none;

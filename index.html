@@ -20,7 +20,7 @@
             <a href="#home">HOME</a>
             <a href="#profile">PROFILE</a>
             <a href="#works">WORKS</a>
-            <a href="#hocontactme">HOCONTACTME</a>
+            <a href="#contact">CONTACT</a>
         </nav>
     </header>
 
@@ -31,12 +31,12 @@
                 세상으로
             </h1>
             <img src="img/tanat.svg" class="char one" style="margin-bottom: 6.2%;">
-            <img src="img/line/1.svg" class="wave" style="margin-bottom: 6.2%;">
             <img src="img/wave/1.svg" class="wave">
-            <img src="img/line/2.svg" class="wave" style="margin-bottom: 2.2%;">
+            <img src="img/line/1.svg" class="wave" style="margin-bottom: 6.2%;">
             <img src="img/wave/2.svg" class="wave">
-            <img src="img/line/3.svg" class="wave" style="margin-bottom: 5.7%;">
+            <img src="img/line/2.svg" class="wave" style="margin-bottom: 2.2%;">
             <img src="img/wave/3.svg" class="wave">
+            <img src="img/line/3.svg" class="wave" style="margin-bottom: 5.7%;">
         </div>
         
         <div id="profile" class="section">
@@ -151,17 +151,28 @@
 
 
     <script>
-        i = 2
+        i = 10
         document.querySelectorAll(".wave").forEach(e => {
             setTimeout(() => {
-                e.style.opacity = "1"
-            }, 500*i++)
+                e.style.transform = "translateY(0)"
+            }, 50*i++)
         })
+        setTimeout(() =>{
+            document.querySelectorAll(".char")[0].style.opacity = "1"
+            document.querySelectorAll(".char")[0].style.transform = "translateX(0)"
+        }, 70*i)
+
+        
+        setTimeout(() =>{
+            document.querySelectorAll("#home h1")[0].style.opacity = "1"
+            document.querySelectorAll("#home h1")[0].style.transform = "translateY(0)"
+        }, 120*i)
+
         new fullpage("#fullpage", {
             autoScrolling: true,
             scrollHorizontally: true,
             scrollingSpeed: 500,
-            sectionsColor: ["#FAFBFD", "#F6F9FC", "#FAFBFD"],
+            sectionsColor: ["#FAFBFD", "#F6F9FC", "#FAFBFD", "#FAFBFD"],
             loopHorizontal: true,
             menu: "#menu",
             navigationTooltips:["HOME", "PROFILE", "WORKS", "CONTACT"],
@@ -169,13 +180,107 @@
             autoScrolling: true,
             navigation: true,
             onLeave: (before, after) => {
+                document.querySelectorAll(".char")[0].style.opacity = "0"
+                document.querySelectorAll(".char")[0].style.transform = "translateX(-20px)"
+                document.querySelectorAll(".char")[1].style.opacity = "0"
+                document.querySelectorAll(".char")[1].style.transform = "translateX(-20)"
+
+                document.querySelectorAll("#home h1")[0].style.opacity = "0"
+                document.querySelectorAll("#home h1")[0].style.transform = "translateY(-20px)"
+
+                document.querySelectorAll(".vector").forEach(e => {
+                    e.style.transform = "translateY(-400px)"
+                    e.style.opacity = "0"
+                })
+                
+                document.querySelectorAll(".skill").forEach(e => {
+                    e.style.transform = "translateY(-20px)"
+                    e.style.opacity = "0"
+                })
+                
+
+                
+                document.querySelectorAll("#info > section").forEach(e => {
+                    e.style.transform = "translateX(20px)"
+                    e.style.opacity = "0"
+                })
+
+                document.querySelectorAll(".wave").forEach(e => {
+                    e.style.transform = "translateY(400px)"
+                })
+
+                
+                document.querySelectorAll(".vector2").forEach(e => {
+                    e.style.transform = "translateX(400px)"
+                })
+
+
+                if (after.index == 0){
+                    i = 10  
+                    document.querySelectorAll(".wave").forEach(e => {
+                        setTimeout(() => {
+                            e.style.transform = "translateY(0)"
+                        }, 70*i++)
+                    })
+
+                    setTimeout(() =>{
+                        document.querySelectorAll(".char")[0].style.opacity = "1"
+                        document.querySelectorAll(".char")[0].style.transform = "translateX(0)"
+                    }, 70*i)
+
+                    
+                    setTimeout(() =>{
+                        document.querySelectorAll("#home h1")[0].style.opacity = "1"
+                        document.querySelectorAll("#home h1")[0].style.transform = "translateY(0)"
+                    }, 120*i)
+                }
                 if (after.index == 1) {
-                    // document.querySelectorAll(".turn-img").forEach(e => {
-                    //     setTimeout(() => {
-                    //         e.style.opacity = "1"
-                    //         e.style.transform = "scale(1)"
-                    //     }, 100*i++)
-                    // })
+                    i = 10
+                    document.querySelectorAll(".vector").forEach(e => {
+                        setTimeout(() => {
+                            e.style.transform = "translateY(0)"
+                            e.style.opacity = "1"
+                        }, 70*i++)
+                    })
+                    
+                    document.querySelectorAll(".skill").forEach(e => {
+                        setTimeout(() => {
+                            e.style.transform = "translateY(0)"
+                            e.style.opacity = "1"
+                        }, 100*i++)
+                    })
+                    
+                    setTimeout(() =>{
+                        document.querySelectorAll(".char")[1].style.opacity = "1"
+                        document.querySelectorAll(".char")[1].style.transform = "translateX(0)"
+                    }, 70*i)
+
+                    
+                    document.querySelectorAll("#info > section").forEach(e => {
+                        setTimeout(() => {
+                            e.style.transform = "translateX(0)"
+                            e.style.opacity = "1"
+                        }, 50*i++)
+                    })
+                }
+
+                
+                if (after.index == 2) {
+                    i = 10
+                    document.querySelectorAll(".vector2").forEach(e => {
+                        setTimeout(() => {
+                            e.style.transform = "translateY(0)"
+                            e.style.opacity = "1"
+                        }, 70*i++)
+                    })
+                    
+                    i = 5
+                    document.querySelectorAll(".work").forEach(e => {
+                        setTimeout(() => {
+                            e.style.transform = "translateY(0)"
+                            e.style.opacity = "1"
+                        }, 300*i++)
+                    })
                 }
             }
         });
