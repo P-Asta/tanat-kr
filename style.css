@@ -196,6 +196,12 @@ h1{
     margin-left: 30%;
 }
 
+#works  h1{
+    transform: translateX(-20px);
+    opacity: 0;
+    transition: all .5s;
+}
+
 #items{
     display: flex;
     gap: 5%;
@@ -206,6 +212,9 @@ h1{
     font-size: 20px;
     color: #7982AD;
     font-weight: 200;
+    opacity: 0;
+    transition: all .5s;
+    transform: translateX(20px);
 }
 
 .item.active{
@@ -234,6 +243,11 @@ h1{
     cursor: pointer;
 }
 
+#arrows > img{
+    transition: all .5s;
+    opacity: 0;
+}
+
 #contact p{
     position: absolute;
     bottom: 10px;
@@ -246,10 +260,18 @@ h1{
     width: 100%;
     left: 0;
     bottom: 0;
+
+    transition: all .5s;
+
+    transform: translateY(500px);
 }
 
 #des{
-    color: #7982AD
+    color: #7982AD;
+
+    transition: all .5s;
+    opacity: 0;
+    transform: translateY(-10px);
 }
 #contact{
     display: flex;
@@ -283,7 +305,6 @@ h1{
 
 #contact{
     --right: 10%;
-    --left: 30%
 }
 
 #contact h1{
@@ -291,6 +312,10 @@ h1{
     right: var(--right);
     bottom: 50%;
     margin-bottom: 50px;
+
+    transition: all .5s;
+    transform: translateX(-20px);
+    opacity: 0;
 }
 
 #contact #line{
@@ -299,10 +324,10 @@ h1{
     right: var(--right);
     bottom: 50%;
     background: linear-gradient(270deg, #7982AD 0%, #B4C9F3 100%);
-    padding-left: var(--left);
     margin-bottom: 50px;
     height: 5px;
     border-radius: 10px;
+    transition: all .5s;
 
 }
 
@@ -312,4 +337,8 @@ h1{
     font-weight: 200;
     right: var(--right);
     bottom: 50%;
+
+    transition: all .5s;
+    transform: translateX(20px);
+    opacity: 0;
 }

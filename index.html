@@ -10,7 +10,7 @@
     <script src="script.js"></script>
     <link href="style.css" rel="stylesheet" />
 
-    <title></title>
+    <title>tanat</title>
 </head>
 
 <body style="text-align: center;">
@@ -236,6 +236,31 @@
                 })
 
 
+                
+                document.querySelectorAll("#works h1")[0].style.opacity = "0"
+                document.querySelectorAll("#works h1")[0].style.transform = "translateX(-20px)"
+
+                document.querySelectorAll(".item").forEach(e => {
+                    e.style.opacity = "0"
+                    e.style.transform = "translateX(20px)"
+                })
+
+                document.querySelectorAll("#arrows > img").forEach(e => {
+                    if (e.id == "before"){
+                        e.style.transform = "translateX(20px) rotate(180deg)"
+                    }else{
+                        e.style.transform = "translateX(20px)"
+                    }
+                    e.style.opacity = "0"
+                })
+
+                document.querySelectorAll("#des")[0].style.opacity = "0"
+                document.querySelectorAll("#des")[0].style.transform = "translateY(-10px)"
+                
+                document.querySelectorAll(".vector3").forEach(e => {
+                    e.style.transform = "translateY(500px)"
+                    e.style.opacity = "0"
+                })
                 if (after.index == 0){
                     i = 10
                     document.querySelectorAll(".wave").forEach(e => {
@@ -287,24 +312,74 @@
                             e.style.opacity = "1"
                         }, 50*i++)
                     })
-                }
-
-                
+                }           
                 if (after.index == 2) {
                     i = 10
                     document.querySelectorAll(".vector2").forEach(e => {
                         setTimeout(() => {
                             e.style.transform = "translateY(0)"
                             e.style.opacity = "1"
-                        }, 70*i++)
+                        }, 80*i++)
+                    })
+                    setTimeout(() => {
+                        document.querySelectorAll("#works h1")[0].style.opacity = "1"
+                        document.querySelectorAll("#works h1")[0].style.transform = "translateX(0)"
+                    }, 1000)
+
+                    document.querySelectorAll("#arrows > img").forEach(e => {
+                        setTimeout(() => {
+                            if (e.id == "before"){
+                                e.style.transform = "translateX(0) rotate(180deg)"
+                            }else{
+                                e.style.transform = "translateX(0)"
+                            }
+                            e.style.opacity = "1"
+                        }, 80*i++)
                     })
                     
-                    i = 5
+                    
+                    document.querySelectorAll(".item").forEach(e => {
+                        setTimeout(() => {
+                            e.style.opacity = "1"
+                            e.style.transform = "translateX(0)"
+                        }, 110*i++)
+                    })
+                    i = 20
+
                     document.querySelectorAll(".work").forEach(e => {
                         setTimeout(() => {
                             e.style.transform = "translateY(0)"
-                        }, 200*i++)
+                        }, 100*i++)
                     })
+
+                    
+                    setTimeout(() => {
+                        document.querySelectorAll("#des")[0].style.opacity = "1"
+                        document.querySelectorAll("#des")[0].style.transform = "translateY(0)"
+                    }, 100*i++)
+
+                }
+                if (after.index == 3){
+                    i = 10
+                    document.querySelectorAll(".vector3").forEach(e => {
+                        setTimeout(() => {
+                            e.style.transform = "translateY(0)"
+                            e.style.opacity = "1"
+                        }, 80*i++)
+                    })
+                    setTimeout(() => {
+                        document.querySelectorAll("#contact h1")[0].style.transform = "translateX(0)"
+                        document.querySelectorAll("#contact h1")[0].style.opacity = "1"
+                    }, 70*i++)
+
+                    setTimeout(() => {
+                        document.querySelectorAll("#line")[0].style.paddingLeft = "20%"
+                    }, 80*i++)
+                
+                    setTimeout(() => {
+                        document.querySelectorAll("#contact h2")[0].style.transform = "translateX(0)"
+                        document.querySelectorAll("#contact h2")[0].style.opacity = "1"
+                    }, 80*i++)
                 }
             }
         });
