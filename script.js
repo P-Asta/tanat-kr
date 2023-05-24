@@ -1,6 +1,10 @@
 let a = 0
 des = ["대충설명1", "대충설명2", "대충설명3"]
 window.onload = () =>{
+    gap = 869
+    if (window.outerWidth <= 450){
+        gap = 559
+    }
     document.getElementById("des").innerHTML = des[0]
     document.getElementById("before").addEventListener("click", () =>{
         a = a > document.querySelectorAll(".work").length ? document.querySelectorAll(".work").length-1 : a
@@ -14,7 +18,7 @@ window.onload = () =>{
         document.getElementsByClassName("item")[a + 1].className = "item"
 
         document.querySelectorAll(".work").forEach((e) => {
-            e.style.transform = `translateX(-${a*869}px)`
+            e.style.transform = `translateX(-${a*gap}px)`
         })
     })
     
@@ -31,7 +35,7 @@ window.onload = () =>{
         document.getElementsByClassName("item")[a].className = "item active"
 
         document.querySelectorAll(".work").forEach((e) => {
-            e.style.transform = `translateX(-${a*869}px)`
+            e.style.transform = `translateX(-${a*gap}px)`
         })
     })
 }
