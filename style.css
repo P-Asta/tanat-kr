@@ -29,12 +29,50 @@ header > nav{
     float: right;
 }
 
+header > label{
+    display: none;
+    gap: 4px;
+    flex-direction: column;
+    margin-right: var(--mg);
+    margin-top: 29px;
+    float: right;
+}
+
+header > input{
+    display: none;
+}
+
+header > div{
+    display: none;
+}
+
+
+span{
+    background-color: #0F1F6C;
+    width: 30px;
+    height: 4px;
+    border-radius: 10px;
+    transition: all .5s;
+}
+
+header > input:checked ~ label > span:nth-child(1){
+    transform: rotate(45deg) translateY(7px) translateX(4px)
+}
+header > input:checked ~ label > span:nth-child(2){
+    transform: rotate(10deg) translateY(10px);
+    opacity: 0;
+}
+header > input:checked ~ label > span:nth-child(3){
+    transform: rotate(-45deg) translateY(-7px) translateX(4px)
+}
+
 header > nav > a{
     color: #0F1F6C;
     text-decoration: none;
 }
 .wave{
     transform: translateY(400px);
+    /* transition-timing-function: cubic-bezier(0, 0.61, 0.21, 5); */
     transition: all .5s;
     position: absolute;
     width: 100%;
@@ -106,8 +144,13 @@ h1{
     /* left: 17px;  */
     background-color: red;
 }
-#info h1{
+#info > h1{
     margin: 0;
+
+    
+    transition: all .5s;
+    opacity: 0;
+    transform: translateX(20px);
 }
 
 #info{
@@ -158,7 +201,6 @@ h1{
     border-radius: 15px;
 
     transform: translateY(-400px);
-    opacity: 0;
     z-index: 0;
 }
 
@@ -191,6 +233,12 @@ h1{
     margin-left: 30%;
 }
 
+#works  h1{
+    transform: translateX(-20px);
+    opacity: 0;
+    transition: all .5s;
+}
+
 #items{
     display: flex;
     gap: 5%;
@@ -201,6 +249,9 @@ h1{
     font-size: 20px;
     color: #7982AD;
     font-weight: 200;
+    opacity: 0;
+    transition: all .5s;
+    transform: translateX(20px);
 }
 
 .item.active{
@@ -209,6 +260,15 @@ h1{
     color: #3D74E0;
     font-weight: 900;
 }
+
+
+
+#arrows{
+    z-index: 10;
+    background-color: #FAFBFD;
+    cursor: pointer;
+}
+
 
 #arrows::before{
     content: '';
@@ -223,13 +283,9 @@ h1{
     height: 57px;
 
 }
-
-#arrows{
-    position: absolute;
-    background-color: #FAFBFD;
-    right: 40%;
-    bottom: 66%;
-    cursor: pointer;
+#arrows > img{
+    transition: all .5s;
+    opacity: 0;
 }
 
 #contact p{
@@ -244,10 +300,18 @@ h1{
     width: 100%;
     left: 0;
     bottom: 0;
+
+    transition: all .5s;
+
+    transform: translateY(500px);
 }
 
 #des{
-    color: #7982AD
+    color: #7982AD;
+
+    transition: all .5s;
+    opacity: 0;
+    transform: translateY(-10px);
 }
 #contact{
     display: flex;
@@ -262,12 +326,12 @@ h1{
     background: #F6F9FC;
     border-radius: 8px;
     padding: 100px;
+    border: 1px #ddd solid;
 }
 
 #contact article>a {
     background-color: #B4C9F3;
     color: #7982AD;
-    border: #F6F9FC 1px solid;
     padding: 16px 48px;
     border-radius: 5px;
     text-decoration: none;
@@ -276,7 +340,6 @@ h1{
 
 #contact{
     --right: 10%;
-    --left: 30%
 }
 
 #contact h1{
@@ -284,6 +347,10 @@ h1{
     right: var(--right);
     bottom: 50%;
     margin-bottom: 50px;
+
+    transition: all .5s;
+    transform: translateX(-20px);
+    opacity: 0;
 }
 
 #contact #line{
@@ -292,10 +359,10 @@ h1{
     right: var(--right);
     bottom: 50%;
     background: linear-gradient(270deg, #7982AD 0%, #B4C9F3 100%);
-    padding-left: var(--left);
     margin-bottom: 50px;
     height: 5px;
     border-radius: 10px;
+    transition: all .5s;
 
 }
 
@@ -305,8 +372,11 @@ h1{
     font-weight: 200;
     right: var(--right);
     bottom: 50%;
-}
 
+    transition: all .5s;
+    transform: translateX(20px);
+    opacity: 0;
+}
 
 #arrows > img{
     width: 50px;
@@ -319,6 +389,29 @@ h1{
     header > nav{
         display: none;
     }
+
+    header > label{ display: flex }
+
+    header > input:checked ~ div{
+        position: absolute;
+        border-radius: 0 10px 10px 10px;
+        display: flex;
+        gap: 10px
+        ;
+        right: 10px;
+        top: 89px;
+        padding: 10px;
+        flex-direction: column;
+        background-color: #fff;
+        box-shadow: 0 0 10px #ddd;
+
+    }
+
+    header > div > a{
+        color: #0F1F6C;
+        text-decoration: none;
+    }
+
 }
 
 
@@ -339,7 +432,7 @@ h1{
     }
 
     #profile article{
-        top: 15%;
+        top: 20%;
         left: 5%;
         width: 300px;
     }
@@ -355,7 +448,7 @@ h1{
 
     #works section{
         position: absolute;
-        top: 5%;
+        top: 12%;
         margin-left: 5%;
     }
 
@@ -384,5 +477,28 @@ h1{
     #arrows::before{
         content: '';
         opacity: 0;
+    }
+
+    .vector2{
+        right: -100px;
+    }
+
+    
+    #contact h1{
+        font-size: 40px;
+        top: 9%;
+        left: -20%;
+    }
+    #line{
+        top: 19%;
+        left: 0%;
+        right: none;
+        margin-right: 100px;
+    }
+
+    #contact h2{
+        font-size: 15px;
+        top: 18%;
+        left: -10%;
     }
 }
