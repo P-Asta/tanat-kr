@@ -432,7 +432,7 @@ h1{
     }
 
     #profile article{
-        top: 20%;
+        top: 30%;
         left: 5%;
         width: 300px;
     }
@@ -477,6 +477,11 @@ h1{
     #arrows::before{
         content: '';
         opacity: 0;
+    }
+
+
+    .vector{
+        top: 80px;
     }
 
     .vector2{
