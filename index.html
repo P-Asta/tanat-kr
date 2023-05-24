@@ -10,11 +10,10 @@
     <script src="script.js"></script>
     <link href="style.css" rel="stylesheet" />
 
-    <title>tanat</title>
+    <title></title>
 </head>
 
 <body style="text-align: center;">
-
     <header>
         <img src="img/logo.svg" alt="logo">
         <nav>
@@ -101,10 +100,10 @@
                     <div class="item active">KORCEN</div>
                     <div class="item">TNS</div>
                     <div class="item">Disot</div>
-                    <div id="arrows">
-                        <img src="img/arrow.svg" id="before" style="transform: rotate(180deg);">
-                        <img src="img/arrow.svg" id="after">
-                    </div>
+                </div>
+                <div id="arrows">
+                    <img src="img/arrow.svg" id="before" style="transform: rotate(180deg);">
+                    <img src="img/arrow.svg" id="after">
                 </div>
                 <ul id="works-ul">
                     <li class="work active">
@@ -147,12 +146,7 @@
 
     </div>
 
-    <ul id="#menu">
-        <li data-menuanchor="one" class="active"><a href="#one">HOME</a></li>
-        <li data-menuanchor="two"><a href="#two">PROFILE</a></li>
-        <li data-menuanchor="three"><a href="#three">WORKS</a></li>
-        <li data-menuanchor="four"><a href="#four">CONTACT</a></li>
-    </ul>
+    <ul id="#menu"></ul>
 
 
 
@@ -180,26 +174,20 @@
         new fullpage("#fullpage", {
             autoScrolling: true,
             scrollHorizontally: true,
-            scrollingSpeed: 700,
-            loopHorizontal: true,
+            scrollingSpeed: 500,
             sectionsColor: ["#FAFBFD", "#F6F9FC", "#FAFBFD", "#FAFBFD"],
-            
-
+            loopHorizontal: true,
             menu: "#menu",
             navigationTooltips:["HOME", "PROFILE", "WORKS", "CONTACT"],
-            anchors:['one', 'two', 'three', 'four'],
-            responsiveHeight: 330,
+            anchors:["one", "two", "three", "four"],
             showActiveTooltip: true,
             autoScrolling: true,
             navigation: true,
-            controlArrows: false,
-            scrolloverflow: true,
-            slidesNavPosition: 'bottom',
             onLeave: (before, after) => {
                 document.querySelectorAll(".char")[0].style.opacity = "0"
                 document.querySelectorAll(".char")[0].style.transform = "translateX(-20px)"
                 document.querySelectorAll(".char")[1].style.opacity = "0"
-                document.querySelectorAll(".char")[1].style.transform = "translateX(-20px)"
+                document.querySelectorAll(".char")[1].style.transform = "translateX(-20)"
 
                 document.querySelectorAll("#home h1")[0].style.opacity = "0"
                 document.querySelectorAll("#home h1")[0].style.transform = "translateY(-20px)"
@@ -220,10 +208,6 @@
                     e.style.transform = "translateX(20px)"
                     e.style.opacity = "0"
                 })
-                
-                e = document.querySelectorAll("#info > h1")[0]
-                e.style.transform = "translateX(20px)"
-                e.style.opacity = "0"
 
                 document.querySelectorAll(".wave").forEach(e => {
                     e.style.transform = "translateY(400px)"
@@ -234,61 +218,25 @@
                     e.style.transform = "translateX(400px)"
                 })
 
-                document.querySelectorAll(".work").forEach(e => {
-                    e.style.transform = "translateY(-400px)"
-                })
-
-
-                
-                document.querySelectorAll("#works h1")[0].style.opacity = "0"
-                document.querySelectorAll("#works h1")[0].style.transform = "translateX(-20px)"
-
-                document.querySelectorAll(".item").forEach(e => {
-                    e.style.opacity = "0"
-                    e.style.transform = "translateX(20px)"
-                })
-
-                document.querySelectorAll("#arrows > img").forEach(e => {
-                    if (e.id == "before"){
-                        e.style.transform = "translateX(20px) rotate(180deg)"
-                    }else{
-                        e.style.transform = "translateX(20px)"
-                    }
-                    e.style.opacity = "0"
-                })
-
-                document.querySelectorAll("#des")[0].style.opacity = "0"
-                document.querySelectorAll("#des")[0].style.transform = "translateY(-10px)"
-                
-                document.querySelectorAll(".vector3").forEach(e => {
-                    e.style.transform = "translateY(500px)"
-                    e.style.opacity = "0"
-                })
-
-                document.querySelectorAll("#contact h1")[0].style.transform = "translateX(-20px)"
-                document.querySelectorAll("#contact h1")[0].style.opacity = "0"
-                document.querySelectorAll("#line")[0].style.paddingLeft = "0"            
-                document.querySelectorAll("#contact h2")[0].style.transform = "translateX(20px)"
-                document.querySelectorAll("#contact h2")[0].style.opacity = "0"
 
                 if (after.index == 0){
-                    i = 10
+                    i = 10  
                     document.querySelectorAll(".wave").forEach(e => {
                         setTimeout(() => {
                             e.style.transform = "translateY(0)"
-                        }, 50*i++)
+                        }, 70*i++)
                     })
 
                     setTimeout(() =>{
                         document.querySelectorAll(".char")[0].style.opacity = "1"
                         document.querySelectorAll(".char")[0].style.transform = "translateX(0)"
-                    }, 50*i)
+                    }, 70*i)
 
                     
                     setTimeout(() =>{
                         document.querySelectorAll("#home h1")[0].style.opacity = "1"
                         document.querySelectorAll("#home h1")[0].style.transform = "translateY(0)"
-                    }, 70*i)
+                    }, 120*i)
                 }
                 if (after.index == 1) {
                     i = 10
@@ -311,86 +259,32 @@
                         document.querySelectorAll(".char")[1].style.transform = "translateX(0)"
                     }, 70*i)
 
-                    setTimeout(() => {  
-                        e = document.querySelectorAll("#info > h1")[0]
-                        e.style.transform = "translateX(0)"
-                        e.style.opacity = "1"
-                    }, 50*i++)
+                    
                     document.querySelectorAll("#info > section").forEach(e => {
                         setTimeout(() => {
                             e.style.transform = "translateX(0)"
                             e.style.opacity = "1"
                         }, 50*i++)
                     })
-                }           
+                }
+
+                
                 if (after.index == 2) {
                     i = 10
-                    setTimeout(() => {
-                        document.querySelectorAll("#works h1")[0].style.opacity = "1"
-                        document.querySelectorAll("#works h1")[0].style.transform = "translateX(0)"
-                    }, 50*i++)
                     document.querySelectorAll(".vector2").forEach(e => {
                         setTimeout(() => {
                             e.style.transform = "translateY(0)"
                             e.style.opacity = "1"
-                        }, 50*i++)
-                    })
-
-
-                    document.querySelectorAll(".item").forEach(e => {
-                        setTimeout(() => {
-                            e.style.opacity = "1"
-                            e.style.transform = "translateX(0)"
-                        }, 50*i++)
-                    })
-
-                    document.querySelectorAll("#arrows > img").forEach(e => {
-                        setTimeout(() => {
-                            if (e.id == "before"){
-                                e.style.transform = "translateX(0) rotate(180deg)"
-                            }else{
-                                e.style.transform = "translateX(0)"
-                            }
-                            e.style.opacity = "1"
-                        }, 60*i++)
+                        }, 70*i++)
                     })
                     
-                    
-                    
+                    i = 5
                     document.querySelectorAll(".work").forEach(e => {
                         setTimeout(() => {
                             e.style.transform = "translateY(0)"
-                        }, 50*i++)
-                    })
-
-                    
-                    setTimeout(() => {
-                        document.querySelectorAll("#des")[0].style.opacity = "1"
-                        document.querySelectorAll("#des")[0].style.transform = "translateY(0)"
-                    }, 100*i++)
-
-                }
-                if (after.index == 3){
-                    i = 10
-                    document.querySelectorAll(".vector3").forEach(e => {
-                        setTimeout(() => {
-                            e.style.transform = "translateY(0)"
                             e.style.opacity = "1"
-                        }, 50*i++)
+                        }, 300*i++)
                     })
-                    setTimeout(() => {
-                        document.querySelectorAll("#contact h1")[0].style.transform = "translateX(0)"
-                        document.querySelectorAll("#contact h1")[0].style.opacity = "1"
-                    }, 50*i++)
-
-                    setTimeout(() => {
-                        document.querySelectorAll("#line")[0].style.paddingLeft = "20%"
-                    }, 60*i++)
-                
-                    setTimeout(() => {
-                        document.querySelectorAll("#contact h2")[0].style.transform = "translateX(0)"
-                        document.querySelectorAll("#contact h2")[0].style.opacity = "1"
-                    }, 60*i++)
                 }
             }
         });
