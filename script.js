@@ -20,6 +20,10 @@ window.onload = () =>{
         document.querySelectorAll(".work").forEach((e) => {
             e.style.transform = `translateX(-${a*gap}px)`
         })
+
+        document.querySelectorAll(".item").forEach((e) => {
+            e.style.transform = `translateX(-${a*gap/9}px)`
+        })
     })
     
     document.getElementById("after").addEventListener("click", () =>{
@@ -36,6 +40,10 @@ window.onload = () =>{
 
         document.querySelectorAll(".work").forEach((e) => {
             e.style.transform = `translateX(-${a*gap}px)`
+        })
+
+        document.querySelectorAll(".item").forEach((e) => {
+            e.style.transform = `translateX(-${a*gap/9}px)`
         })
     })
 }

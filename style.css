@@ -241,8 +241,10 @@ h1{
 
 #items{
     display: flex;
-    gap: 5%;
+    gap: 50px;
     align-items: center;
+    width: 40%;
+    overflow-x: hidden;
 }
 
 .item{
@@ -264,6 +266,9 @@ h1{
 
 
 #arrows{
+    position: absolute;
+    left: 50%;
+    margin-bottom: 5px;
     z-index: 10;
     background-color: #FAFBFD;
     cursor: pointer;
@@ -462,21 +467,21 @@ h1{
     }
 
     #items{
-        gap: 10px;
+        gap: 5px;
+        width: 7%;
     }
 
     #arrows{
-        left: 12%;
-        top: 25%;
+        left: 7%;
         background: none;
     }
+
     #arrows > img{
         width: 30px;
     }
-
     #arrows::before{
         content: '';
-        opacity: 0;
+        transform: translateY(-20px);
     }
 
 
