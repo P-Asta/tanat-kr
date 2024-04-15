@@ -9,14 +9,14 @@ header{
     position: fixed;
     width: 100%;
     display: block;
-    height: 79px;
+    height: 60px;
     background-color: #ffffff72;
     backdrop-filter: blur(10px);
     z-index: 100;
 }
 header > img{
-    width: 79px;
-    margin-top: 8px;
+    width: 70px;
+    margin-top: 1px;
     margin-left: var(--mg);
     float: left;
 }
@@ -25,7 +25,7 @@ header > nav{
     gap: 80px;
     /* gap: 20%; */
     margin-right: var(--mg);
-    margin-top: 29px;
+    margin-top: 20px;
     float: right;
 }
 
@@ -34,7 +34,7 @@ header > label{
     gap: 4px;
     flex-direction: column;
     margin-right: var(--mg);
-    margin-top: 29px;
+    margin-top: 20px;
     float: right;
 }
 
@@ -69,6 +69,10 @@ header > input:checked ~ label > span:nth-child(3){
 header > nav > a{
     color: #0F1F6C;
     text-decoration: none;
+}
+header > nav > a:hover{
+    color: #5a66a7;
+    transition: all .5s;
 }
 .wave{
     transform: translateY(400px);
@@ -117,6 +121,14 @@ header > nav > a{
     width: 20%;
     bottom: 10%;
     left: 30%;
+}
+
+
+body{
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 #home{
@@ -210,8 +222,9 @@ h1{
 
 
 .work > img{
-    /* width: 100%; */
-    /* height: 100%; */
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
 }
 
 #works-ul{
@@ -241,10 +254,11 @@ h1{
 
 #items{
     display: flex;
-    gap: 50px;
+    gap: 35px;
     align-items: center;
-    width: 30%;
+    width: 40%;
     overflow-x: hidden;
+    white-space: nowrap
 }
 
 .item{
@@ -258,7 +272,7 @@ h1{
 
 .item.active{
     content: '';
-    text-decoration: underline #3D74E0 3px;
+    text-decoration: underline #3D74E0 2px;
     color: #3D74E0;
     font-weight: 900;
 }
@@ -267,11 +281,16 @@ h1{
 
 #arrows{
     position: absolute;
-    left: 50%;
-    margin-bottom: 5px;
+    left: 55%;
     z-index: 10;
     background-color: #FAFBFD;
     cursor: pointer;
+    flex: 100px;
+}
+
+#arrows img:hover{
+    transition: all .5s;
+    content: url(img/arrow_hover.svg);
 }
 
 
@@ -280,24 +299,22 @@ h1{
     position: absolute;
     text-align: right;
     background: #FAFBFD;
-    /* background: red; */
-    right: 80%;
-
-    filter: blur(6px);
-    width: 40px;
-    height: 57px;
-
 }
 #arrows > img{
     transition: all .5s;
     opacity: 0;
+    margin-right: 10px;
 }
+
+
+
 
 #contact p{
     position: absolute;
     bottom: 10px;
     left: 10px;
     margin: 0;
+    color: #4498ff;
 }
 
 .vector3{
@@ -325,6 +342,8 @@ h1{
 }
 
 #contact article{
+    position: relative;
+    z-index: 999;
     display: flex;
     gap: 20px;
     flex-direction: column;
@@ -342,6 +361,11 @@ h1{
     text-decoration: none;
 }
 
+#contact article>a:hover {
+    background-color: #3D74E0;
+    color: #ffffff;
+    transition: all .5s;
+}
 
 #contact{
     --right: 10%;
@@ -384,8 +408,10 @@ h1{
 }
 
 #arrows > img{
-    width: 50px;
+    width: 40px;
 }
+
+
 @media (max-width: 1250px) {
     #fp-nav{
         display: none;
