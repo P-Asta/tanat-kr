@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
     <meta charset="UTF-8" />
@@ -8,16 +8,20 @@
     <link href="fullpage.min.css" rel="stylesheet" />
     <script src="fullpage.min.js"></script>
     <script src="script.js"></script>
+    <script>    
+        document.oncontextmenu=new Function("event.returnValue=false");
+        document.onselectstart=new Function("event.returnValue=false");
+    </script>
     <link href="style.css" rel="stylesheet" />
     <link rel="icon" href="img/logo.svg">
 
-    <title>tanat</title>
+    <title>Tanat</title>
 </head>
 
 <body style="text-align: center;">
 
     <header>
-        <img src="img/logo.svg" alt="logo">
+        <img src="img/logo.svg" alt="logo" ondragstart="return false;" ondrop="return false;">
         <nav>
             <a href="#HOME">HOME</a>
             <a href="#PROFILE">PROFILE</a>
@@ -45,22 +49,22 @@
                 더 쉽고 편리한<br/>
                 세상으로
             </h1>
-            <img src="img/tanat.svg" class="char one" style="margin-bottom: 6.2%;">
-            <img src="img/wave/1.svg" class="wave">
-            <img src="img/line/1.svg" class="wave" style="margin-bottom: 6.2%;">
-            <img src="img/wave/2.svg" class="wave">
-            <img src="img/line/2.svg" class="wave" style="margin-bottom: 2.2%;">
-            <img src="img/wave/3.svg" class="wave">
-            <img src="img/line/3.svg" class="wave" style="margin-bottom: 5.7%;">
+            <img src="img/tanat.svg" class="char one" style="margin-bottom: 6.2%;" ondragstart="return false;" ondrop="return false;">
+            <img src="img/wave/1.svg" class="wave" ondragstart="return false;" ondrop="return false;">
+            <img src="img/line/1.svg" class="wave" style="margin-bottom: 6.2%;" ondragstart="return false;" ondrop="return false;">
+            <img src="img/wave/2.svg" class="wave" ondragstart="return false;" ondrop="return false;">
+            <img src="img/line/2.svg" class="wave" style="margin-bottom: 2.2%;" ondragstart="return false;" ondrop="return false;">
+            <img src="img/wave/3.svg" class="wave" ondragstart="return false;" ondrop="return false;">
+            <img src="img/line/3.svg" class="wave" style="margin-bottom: 5.7%;" ondragstart="return false;" ondrop="return false;">
         </div>
         
         <div id="profile" class="section">
-            <img src="img/vector/1.svg" class="vector">
-            <img src="img/line/4.svg" class="vector" style="margin-top: 8.2%;">
-            <img src="img/vector/2.svg" class="vector">
-            <img src="img/line/5.svg" class="vector" style="margin-top: 9.7%;">
-            <img src="img/vector/3.svg" class="vector">
-            <img src="img/tanat.svg" class="char two" style="margin-bottom: 6.2%;">
+            <img src="img/vector/1.svg" class="vector" ondragstart="return false;" ondrop="return false;">
+            <img src="img/line/4.svg" class="vector" style="margin-top: 8.2%;" ondragstart="return false;" ondrop="return false;">
+            <img src="img/vector/2.svg" class="vector" ondragstart="return false;" ondrop="return false;">
+            <img src="img/line/5.svg" class="vector" style="margin-top: 9.7%;" ondragstart="return false;" ondrop="return false;">
+            <img src="img/vector/3.svg" class="vector" ondragstart="return false;" ondrop="return false;">
+            <img src="img/tanat.svg" class="char two" style="margin-bottom: 6.2%;" ondragstart="return false;" ondrop="return false;">
             <article id="info">
                 <h1>
                     Profile
@@ -83,17 +87,17 @@
                 <section id="skills">
                     
                     <div class="skill">
-                        <img src="img/lang/py.png">
+                        <img src="img/lang/py.png" ondragstart="return false;" ondrop="return false;">
                         python
                     </div>
 
                     <div class="skill">
-                        <img src="img/lang/c.png">
+                        <img src="img/lang/c.png" ondragstart="return false;" ondrop="return false;">
                         c
                     </div>
 
                     <div class="skill">
-                        <img src="img/lang/js.png">
+                        <img src="img/lang/js.png" ondragstart="return false;" ondrop="return false;">
                         js
                     </div>
 
@@ -104,51 +108,47 @@
         </div>
 
         <div id="works" class="section">
-            <img src="img/vector/4.svg" class="vector2">
-            <img src="img/vector/5.svg" class="vector2">
-            <img src="img/vector/6.svg" class="vector2">
-            <img src="img/vector/7.svg" class="vector2">
-            <img src="img/vector/8.svg" class="vector2" style="z-index: 1;">
+            <img src="img/vector/4.svg" class="vector2" ondragstart="return false;" ondrop="return false;">
+            <img src="img/vector/5.svg" class="vector2" ondragstart="return false;" ondrop="return false;">
+            <img src="img/vector/6.svg" class="vector2" ondragstart="return false;" ondrop="return false;">
+            <img src="img/vector/7.svg" class="vector2" ondragstart="return false;" ondrop="return false;">
+            <img src="img/vector/8.svg" class="vector2" style="z-index: 1;" ondragstart="return false;" ondrop="return false;">
 
             <section>
                 <h1>Works</h1>
                 <div id="items">
-                    <div class="item active">KORCEN</div>
+                    <div class="item active">korcen</div>
+                    <div class="item">korcen-ml</div>
                     <div class="item">TNS</div>
-                    <div class="item">Disot</div>
-                    <div class="item">Disot</div>
-                    <div class="item">Disot</div>
-                    <div class="item">Disot</div>
+                    <div class="item">DISTORE</div>
+                    <div class="item">준비중</div>
+                    <div class="item">준비중</div>
                     <div id="arrows">
-                        <img src="img/arrow.svg" id="before" style="transform: rotate(180deg);">
-                        <img src="img/arrow.svg" id="after">
+                        <img src="img/arrow.svg" id="before" style="transform: rotate(180deg);" ondragstart="return false;" ondrop="return false;">
+                        <img src="img/arrow.svg" id="after" ondragstart="return false;" ondrop="return false;">
                     </div>
                 </div>
                 <ul id="works-ul">
                     <li class="work active">
-                        <img src="img/work/1.png">
+                        <img src="img/work/1.png" height="300" width="600" style="margin-top: 45px;" onclick="window.open('https://github.com/KR-korcen/korcen')" ondragstart="return false;" ondrop="return false;">
                     </li>
                     
                     <li class="work">
-                        <img src="img/work/1.png">
+                        <img src="img/work/1.png" height="300" width="600" style="margin-top: 45px;" onclick="window.open('https://github.com/KR-korcen/korcen-ml')" ondragstart="return false;" ondrop="return false;">
                     </li>
                     
                     <li class="work">
-                        <img src="img/work/1.png">
+                        <img src="img/work/2.png" height="300" width="300" style="margin-top: 45px; margin-left: 150px; margin-right: 150px;" onclick="window.open('https://discord.com/oauth2/authorize?client_id=848795383751639080&permissions=8&scope=bot%20applications.commands')" ondragstart="return false;" ondrop="return false;">
                     </li>
                     
                     <li class="work">
-                        <img src="img/work/1.png">
+                        <img src="img/work/3.png" height="300" width="300" style="margin-top: 45px; margin-left: 150px; margin-right: 150px;" ondragstart="return false;" ondrop="return false;">
                     </li>
-                    
-                    
                     <li class="work">
-                        <img src="img/work/1.png">
+                        <img src="img/work/1.png" height="300" width="600" style="margin-top: 45px;" ondragstart="return false;" ondrop="return false;">
                     </li>
-                    
-                    
                     <li class="work">
-                        <img src="img/work/1.png">
+                        <img src="img/work/1.png" height="300" width="600" style="margin-top: 45px;" ondragstart="return false;" ondrop="return false;"> 
                     </li>
                 </ul>
                 <!-- script.js에서 설정 가능 -->
@@ -158,16 +158,16 @@
 
         <div id="contact" class="section">
             
-            <img src="img/vector/9.svg" class="vector3">
-            <img src="img/line/6.svg" class="vector3" style="margin-bottom: 3.3%;">
-            <img src="img/vector/10.svg" class="vector3">
-            <img src="img/line/7.svg" class="vector3" style="margin-bottom: 1.9%;">
-            <img src="img/vector/11.svg" class="vector3">
+            <img src="img/vector/9.svg" class="vector3" ondragstart="return false;" ondrop="return false;">
+            <img src="img/line/6.svg" class="vector3" style="margin-bottom: 3.3%;" ondragstart="return false;" ondrop="return false;">
+            <img src="img/vector/10.svg" class="vector3" ondragstart="return false;" ondrop="return false;">
+            <img src="img/line/7.svg" class="vector3" style="margin-bottom: 1.9%;" ondragstart="return false;" ondrop="return false;">
+            <img src="img/vector/11.svg" class="vector3" ondragstart="return false;" ondrop="return false;">
 
             <article>
-                <a href="https://github.com/Tanat05">github</a>
-                <a href="">discord</a>
-                <a href="">team</a>
+                <a href="https://github.com/Tanat05">GITHUB</a>
+                <a href="https://discord.gg/4GFe2Ff3Fe">DISCORD</a>
+                <a href="https://www.instagram.com/tanat_05/">INSTAGRAM</a>
             </article>
             <h1>Contact</h1>
             <div id="line"></div>
@@ -305,19 +305,19 @@
                     document.querySelectorAll(".wave").forEach(e => {
                         setTimeout(() => {
                             e.style.transform = "translateY(0)"
-                        }, 50*i++)
+                        }, 40*i++)
                     })
 
                     setTimeout(() =>{
                         document.querySelectorAll(".char")[0].style.opacity = "1"
                         document.querySelectorAll(".char")[0].style.transform = "translateX(0)"
-                    }, 50*i)
+                    }, 40*i)
 
                     
                     setTimeout(() =>{
                         document.querySelectorAll("#home h1")[0].style.opacity = "1"
                         document.querySelectorAll("#home h1")[0].style.transform = "translateY(0)"
-                    }, 70*i)
+                    }, 60*i)
                 }
                 if (after.index == 1) {
                     i = 10
@@ -325,31 +325,31 @@
                         setTimeout(() => {
                             e.style.transform = "translateY(0)"
                             e.style.opacity = "1"
-                        }, 70*i++)
+                        }, 60*i++)
                     })
                     
                     document.querySelectorAll(".skill").forEach(e => {
                         setTimeout(() => {
                             e.style.transform = "translateY(0)"
                             e.style.opacity = "1"
-                        }, 100*i++)
+                        }, 90*i++)
                     })
                     
                     setTimeout(() =>{
                         document.querySelectorAll(".char")[1].style.opacity = "1"
                         document.querySelectorAll(".char")[1].style.transform = "translateX(0)"
-                    }, 70*i)
+                    }, 60*i)
 
                     setTimeout(() => {  
                         e = document.querySelectorAll("#info > h1")[0]
                         e.style.transform = "translateX(0)"
                         e.style.opacity = "1"
-                    }, 50*i++)
+                    }, 40*i++)
                     document.querySelectorAll("#info > section").forEach(e => {
                         setTimeout(() => {
                             e.style.transform = "translateX(0)"
                             e.style.opacity = "1"
-                        }, 50*i++)
+                        }, 40*i++)
                     })
                 }           
                 if (after.index == 2) {
@@ -357,12 +357,12 @@
                     setTimeout(() => {
                         document.querySelectorAll("#works h1")[0].style.opacity = "1"
                         document.querySelectorAll("#works h1")[0].style.transform = "translateX(0)"
-                    }, 50*i++)
+                    }, 40*i++)
                     document.querySelectorAll(".vector2").forEach(e => {
                         setTimeout(() => {
                             e.style.transform = "translateY(0)"
                             e.style.opacity = "1"
-                        }, 50*i++)
+                        }, 40*i++)
                     })
 
 
@@ -370,7 +370,7 @@
                         setTimeout(() => {
                             e.style.opacity = "1"
                             e.style.transform = "translateX(0)"
-                        }, 50*i++)
+                        }, 40*i++)
                     })
 
                     document.querySelectorAll("#arrows > img").forEach(e => {
@@ -381,7 +381,7 @@
                                 e.style.transform = "translateX(0)"
                             }
                             e.style.opacity = "1"
-                        }, 60*i++)
+                        }, 50*i++)
                     })
                     
                     
@@ -389,14 +389,14 @@
                     document.querySelectorAll(".work").forEach(e => {
                         setTimeout(() => {
                             e.style.transform = "translateY(0)"
-                        }, 50*i++)
+                        }, 40*i++)
                     })
 
                     
                     setTimeout(() => {
                         document.querySelectorAll("#des")[0].style.opacity = "1"
                         document.querySelectorAll("#des")[0].style.transform = "translateY(0)"
-                    }, 100*i++)
+                    }, 50*i++)
 
                 }
                 if (after.index == 3){
@@ -405,21 +405,21 @@
                         setTimeout(() => {
                             e.style.transform = "translateY(0)"
                             e.style.opacity = "1"
-                        }, 50*i++)
+                        }, 40*i++)
                     })
                     setTimeout(() => {
                         document.querySelectorAll("#contact h1")[0].style.transform = "translateX(0)"
                         document.querySelectorAll("#contact h1")[0].style.opacity = "1"
-                    }, 50*i++)
+                    }, 40*i++)
 
                     setTimeout(() => {
                         document.querySelectorAll("#line")[0].style.paddingLeft = "20%"
-                    }, 60*i++)
+                    }, 50*i++)
                 
                     setTimeout(() => {
                         document.querySelectorAll("#contact h2")[0].style.transform = "translateX(0)"
                         document.querySelectorAll("#contact h2")[0].style.opacity = "1"
-                    }, 60*i++)
+                    }, 50*i++)
                 }
             }
         });
