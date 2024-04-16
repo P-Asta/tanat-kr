@@ -338,6 +338,8 @@ h1{
     transition: all .5s;
     opacity: 0;
     transform: translateY(-10px);
+    word-break: break-all;
+    margin-right: 50px;
 }
 #contact{
     display: flex;
