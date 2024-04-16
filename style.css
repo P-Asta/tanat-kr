@@ -339,7 +339,8 @@ h1{
     opacity: 0;
     transform: translateY(-10px);
     word-break: break-all;
-    margin-right: 50px;
+    width: 50vw !important;
+    /* margin-right: 100px; */
 }
 #contact{
     display: flex;
