@@ -8,12 +8,14 @@ window.onload = () =>{
         gap2 = 10.5
     }
     document.getElementById("des").innerHTML = des[0]
+    document.getElementById("des2").innerHTML = des[0]
     document.getElementById("before").addEventListener("click", () =>{
         a = a > document.querySelectorAll(".work").length ? document.querySelectorAll(".work").length-1 : a
         if (0 > --a){ return }
         document.getElementsByClassName("work")[a].className = "work active"
         document.getElementsByClassName("work")[a + 1].className = "work"
         document.getElementById("des").innerHTML = des[a]
+        document.getElementById("des2").innerHTML = des[a]
         
         
         document.getElementsByClassName("item")[a].className = "item active"
@@ -35,6 +37,8 @@ window.onload = () =>{
         document.getElementsByClassName("work")[a - 1].className = "work"
         document.getElementsByClassName("work")[a].className = "work active"
         document.getElementById("des").innerHTML = des[a]
+        document.getElementById("des2").innerHTML = des[a]
+
 
         
         document.getElementsByClassName("item")[a - 1].className = "item"

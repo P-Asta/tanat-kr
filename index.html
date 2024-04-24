@@ -112,7 +112,7 @@
             <img src="img/vector/5.svg" class="vector2" ondragstart="return false;" ondrop="return false;">
             <img src="img/vector/6.svg" class="vector2" ondragstart="return false;" ondrop="return false;">
             <img src="img/vector/7.svg" class="vector2" ondragstart="return false;" ondrop="return false;">
-            <img src="img/vector/8.svg" class="vector2" style="z-index: 1;" ondragstart="return false;" ondrop="return false;">
+            <img src="img/vector/8.svg" class="vector2" style="z-index: 3;" ondragstart="return false;" ondrop="return false;">
 
             <section>
                 <h1>Works</h1>
@@ -152,6 +152,7 @@
                     </li>
                 </ul>
                 <!-- script.js에서 설정 가능 -->
+                <p id="des2"></p>
                 <p id="des"></p>
             </section>
         </div>
@@ -288,6 +289,9 @@
 
                 document.querySelectorAll("#des")[0].style.opacity = "0"
                 document.querySelectorAll("#des")[0].style.transform = "translateY(-10px)"
+
+                document.querySelectorAll("#des2")[0].style.opacity = "0"
+                document.querySelectorAll("#des2")[0].style.transform = "translateY(-26px)"
                 
                 document.querySelectorAll(".vector3").forEach(e => {
                     e.style.transform = "translateY(500px)"
@@ -396,6 +400,9 @@
                     setTimeout(() => {
                         document.querySelectorAll("#des")[0].style.opacity = "1"
                         document.querySelectorAll("#des")[0].style.transform = "translateY(0)"
+
+                        document.querySelectorAll("#des2")[0].style.opacity = "1"
+                        document.querySelectorAll("#des2")[0].style.transform = "translateY(-16px)"
                     }, 50*i++)
 
                 }

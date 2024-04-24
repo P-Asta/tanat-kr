@@ -4,6 +4,7 @@
     scroll-behavior: smooth;
 }
 
+
 header{
     --mg: 10%;
     position: fixed;
@@ -216,14 +217,16 @@ h1{
     border-radius: 15px;
 
     transform: translateY(-400px);
-    z-index: 0;
+    z-index: 1;
 }
 
 .work.active{
     border: solid #3D74E0 5px;
 }
 
-
+.work {
+    z-index: 2;
+}
 .work > img{
     /* width: 100%; */
     width: 620px;
@@ -333,14 +336,29 @@ h1{
 }
 
 #des{
-    color: #7982AD;
+    color: #fff;
+    mix-blend-mode: overlay;
+    position: relative;
+    z-index: 10;
 
     transition: all .5s;
     opacity: 0;
     transform: translateY(-10px);
     word-break: break-all;
     width: 50vw !important;
-    /* margin-right: 100px; */
+}
+#works img {
+    z-index: 1;
+}
+#des2{
+    position: absolute;
+    color: #4a506e;
+    z-index: 0;
+    transition: all .5s;
+    opacity: 0;
+    transform: translateY(-26px);
+    word-break: break-all;
+    width: 50vw !important;
 }
 #contact{
     display: flex;
